@@ -9,6 +9,14 @@ gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+
+# Use bootstrap as front end framework
+gem 'bootstrap', '~> 4.3'
+# Use slim-rails as Slim templates generator for Rails 3, 4 and 5
+gem 'slim-rails', '~> 3.2'
+# the font-awesome font bundled as an asset for the rails asset pipeline
+gem 'font-awesome-rails', '~> 4.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
