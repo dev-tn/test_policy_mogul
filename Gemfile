@@ -16,6 +16,8 @@ gem 'bootstrap', '~> 4.3'
 gem 'slim-rails', '~> 3.2'
 # the font-awesome font bundled as an asset for the rails asset pipeline
 gem 'font-awesome-rails', '~> 4.7'
+# A gem to automate using jQuery with Rails, required for bootstrap
+gem 'jquery-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
