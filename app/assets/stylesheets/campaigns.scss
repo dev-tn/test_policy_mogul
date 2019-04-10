@@ -6,3 +6,16 @@
   border-left: 5px #dddd solid;
   padding-left: 15px;
 }
+
+.pm-tag li {
+  display: inline-block;
+  border: 1px solid green;
+  padding: 2px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  i {
+    font-size: 12px;
+    color: orange;
+    margin-left: 5px;
+  }
+}
