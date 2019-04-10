@@ -1,2 +1,37 @@
-h1 Campaigns#new
-p Find me in app/views/campaigns/new.html.slim
+.col-md-10.mt-5
+  .card.p-4
+    h1 Create new campaign
+    form
+      .form-group
+        label for="title"  Title
+        input#title.form-control type="text"
+      .form-group
+        label for="description"  Description
+        textarea#description.form-control placeholder="Enter as much information here as possible to describe your campaign and what you are trying to achieve. Others will see this description unless the campaign is accessible to collaborators only." rows="7"
+        small#descriptionHelp.form-text.text-muted.mb-2
+          | Surround content with an asterisk on east side to make it
+          i  italic.
+          | Surround content with two asterisk on each side to make it
+          b  bold
+        .form-group
+          label This campaign will be accessible to:
+          .customqoute
+            .form-check
+              input#campaignradios1.form-check-input checked="" name="campaignradios" type="radio" value="option1" /
+              label.form-check-label for="campaignradios1"
+                | Everyone
+                p This campaign will be visible to other PolicyMogul users and maybe indexed by search engines.Specific documents, collaborators and other information
+                  you choose can be made available to campaign collaborators only.
+            .form-check
+              input#campaignradios2.form-check-input name="campaignradios" type="radio" value="option2" /
+              label.form-check-label for="campaignradios2"
+                | Parliamentarians and collaborators only
+                p PolicyMogul maintain a list of MPs and peers, and allows them and their staff to view campaigns related to their interests.Specific documents, collaborators
+                  and other information you choose can be made available to campaign collaborators only.
+            .form-check
+              input#campaignradios3.form-check-input name="campaignradios" type="radio" value="option2" /
+              label.form-check-label for="campaignradios3"
+                | Collaborators only
+                p This campaign will not display to others, you will need to invite specific people in order to collaborate with them.
+      button.btn.btn-primary.float-right type="submit"  Submit
+
