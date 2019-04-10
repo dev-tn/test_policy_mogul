@@ -2,10 +2,11 @@
   .card.p-4
     h1 Create new campaign
     form
-      .form-group
+      .form-group.step-1.active
         label for="title"  Title
         input#title.form-control type="text"
-      .form-group
+        button.btn.btn-primary.mt-2.float-right.next-button data-id="step-2" type="button" Next
+      .form-group.step-2
         label for="description"  Description
         textarea#description.form-control placeholder="Enter as much information here as possible to describe your campaign and what you are trying to achieve. Others will see this description unless the campaign is accessible to collaborators only." rows="7"
         small#descriptionHelp.form-text.text-muted.mb-2
@@ -13,58 +14,64 @@
           i  italic.
           | Surround content with two asterisk on each side to make it
           b  bold
-        .form-group
-          label This campaign will be accessible to:
-          .customqoute
-            .form-check
-              input#campaignradios1.form-check-input checked="" name="campaignradios" type="radio" value="option1" /
-              label.form-check-label for="campaignradios1"
-                | Everyone
-                p This campaign will be visible to other PolicyMogul users and maybe indexed by search engines.Specific documents, collaborators and other information
-                  you choose can be made available to campaign collaborators only.
-            .form-check
-              input#campaignradios2.form-check-input name="campaignradios" type="radio" value="option2" /
-              label.form-check-label for="campaignradios2"
-                | Parliamentarians and collaborators only
-                p PolicyMogul maintain a list of MPs and peers, and allows them and their staff to view campaigns related to their interests.Specific documents, collaborators
-                  and other information you choose can be made available to campaign collaborators only.
-            .form-check
-              input#campaignradios3.form-check-input name="campaignradios" type="radio" value="option2" /
-              label.form-check-label for="campaignradios3"
-                | Collaborators only
-                p This campaign will not display to others, you will need to invite specific people in order to collaborate with them.
-        .form-group.mb-2
-          label Tags that describe this campaign:
-          ul.pm-tag.p-0
-            li
-              | Enviroment (Enviromental educaiton)
-              a href="#"
-                i.fa.fa-times
-            li
-              | Energy (Policy)
-              a href="#"
-                i.fa.fa-times
-            li
-              | Energy (Green fuel)
-              a href="#"
-                i.fa.fa-times
-            li
-              | Energy (Exploration)
-              a href="#"
-                i.fa.fa-times
-            li
-              | Energy (Fossil fuels)
-              a href="#"
-                i.fa.fa-times
-            li
-              | disabled
-              a href="#"
-                i.fa.fa-times
-            li
-              | Energy (Efficiency)
-              a href="#"
-                i.fa.fa-times
-        .form-group
+        .float-right
+          button.btn.btn-light.mt-2.mr-2.next-button data-id="step-1" type="button" Previous
+          button.btn.btn-primary.mt-2.next-button data-id="step-3" type="button"  Next
+      .form-group.step-3
+        label This campaign will be accessible to:
+        .customqoute
+          .form-check
+            input#campaignradios1.form-check-input checked="" name="campaignradios" type="radio" value="option1" /
+            label.form-check-label for="campaignradios1"
+              | Everyone
+              p This campaign will be visible to other PolicyMogul users and maybe indexed by search engines.Specific documents, collaborators and other information
+                you choose can be made available to campaign collaborators only.
+          .form-check
+            input#campaignradios2.form-check-input name="campaignradios" type="radio" value="option2" /
+            label.form-check-label for="campaignradios2"
+              | Parliamentarians and collaborators only
+              p PolicyMogul maintain a list of MPs and peers, and allows them and their staff to view campaigns related to their interests.Specific documents, collaborators
+                and other information you choose can be made available to campaign collaborators only.
+          .form-check
+            input#campaignradios3.form-check-input name="campaignradios" type="radio" value="option2" /
+            label.form-check-label for="campaignradios3"
+              | Collaborators only
+              p This campaign will not display to others, you will need to invite specific people in order to collaborate with them.
+        .float-right
+          button.btn.btn-light.mt-2.mr-2.next-button data-id="step-2" type="button" Previous
+          button.btn.btn-primary.mt-2.float-right.next-button data-id="step-4" type="button"  Next
+      .form-group.mb-2.step-4
+        label Tags that describe this campaign:
+        ul.pm-tag.p-0
+          li
+            | Enviroment (Enviromental educaiton)
+            a href="#"
+              i.fa.fa-times
+          li
+            | Energy (Policy)
+            a href="#"
+              i.fa.fa-times
+          li
+            | Energy (Green fuel)
+            a href="#"
+              i.fa.fa-times
+          li
+            | Energy (Exploration)
+            a href="#"
+              i.fa.fa-times
+          li
+            | Energy (Fossil fuels)
+            a href="#"
+              i.fa.fa-times
+          li
+            | disabled
+            a href="#"
+              i.fa.fa-times
+          li
+            | Energy (Efficiency)
+            a href="#"
+              i.fa.fa-times
+        div
           input#tagsearch.form-control type="text" placeholder="Type to add more tags..."
           .taglist
             ul.list-group
@@ -86,5 +93,6 @@
               li.list-group-item.border-0
                 input.mr-2 type="checkbox"
                 | Air fares
-      button.btn.btn-primary.float-right type="submit"  Submit
-
+          .float-right
+            button.btn.btn-light.mt-2.mr-2.next-button data-id="step-3" type="button" Previous
+            button.btn.btn-primary.mt-2.float-right type="submit"  Submit
