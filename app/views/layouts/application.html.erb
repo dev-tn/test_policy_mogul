@@ -4,12 +4,54 @@
     <title>TestPolicyMogul</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light policy-navbar">
+      <a class="nav-link d-block d-sm-block d-md-none" href="#"><i class="fa fa-bars" id="menu-toggle"></i></a>
+      <a class="navbar-brand" href="#">
+        <img src="https://www.policymogul.com/wp-content/themes/Policy%20Mogul/assets/images/logo.svg" width="150px" alt="">
+      </a>
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fa fa-bell-o"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-none d-md-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            elliot_robinson@hotmail.co.uk
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="border-right" id="sidebar-wrapper">
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action border-0">Home</a>
+          <a href="#" class="list-group-item active list-group-item-action border-0">Campaigns</a>
+          <a href="#" class="list-group-item list-group-item-action border-0">Organisations</a>
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid p-0">
+          <div class="row">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
   </body>
 </html>
